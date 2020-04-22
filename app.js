@@ -51,7 +51,13 @@ function generatePhotos(data) {
     data.photos.forEach((photo) => {
         const galleryImg = document.createElement('div');
         galleryImg.classList.add('gallery-img');
-        galleryImg.innerHTML = `<img src="${photo.src.large}" /><p>${photo.photographer}</p>`;
+        galleryImg.innerHTML = `
+            <div class="gallery-info">
+                <p>${photo.photographer}</p>
+                <a href="${photo.src.original}" target="_blank">Download</a>
+            </div>
+            <img src="${photo.src.large}" />
+        `;
         gallery.appendChild(galleryImg);
     });
 }
@@ -71,14 +77,14 @@ async function searchPhotos(query) {
     generatePhotos(data);
 }
 
-// curatedPhotos();
+curatedPhotos();
 
 //DEBUGGING SAMPLING
-for (let i = 0; i < 20; i++) {
-    const galleryImg = document.createElement('div');
-    galleryImg.style.height = '100px';
-    galleryImg.style.width = '100px';
-    galleryImg.style.backgroundColor = '#cccccc';
-    galleryImg.style.margin = '2rem';
-    gallery.appendChild(galleryImg);
-}
+// for (let i = 0; i < 20; i++) {
+//     const galleryImg = document.createElement('div');
+//     galleryImg.style.height = '100px';
+//     galleryImg.style.width = '100px';
+//     galleryImg.style.backgroundColor = '#cccccc';
+//     galleryImg.style.margin = '2rem';
+//     gallery.appendChild(galleryImg);
+// }
