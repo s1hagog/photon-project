@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    min-height: 30vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    padding: 2rem;
+    text-decoration: none;
+    color: #000000;
+}
+
+header h2 {
+    padding: 2rem;
+}
+
+.search-form {
+    padding: 2rem;
+    display: flex;
+}
+
+.search-form input {
+    font-size: 2rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: 2px solid rgb(74, 69, 131);
+}
+
+.search-form button {
+    font: inherit;
+    border: none;
+    padding: 0.5rem;
+    background: rgb(74, 69, 131);
+    font-size: 1rem;
+    color: #ffffff;
+    cursor: pointer;
+}
