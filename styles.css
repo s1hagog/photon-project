@@ -71,8 +71,18 @@ header h2 {
     color: grey;
 }
 
-.gallery-info a {
+.gallery-download {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-download a {
     color: grey;
+    text-decoration: none;
+}
+
+.gallery-download a:hover {
+    color: black;
 }
 
 .nav-button {

@@ -79,8 +79,8 @@ function generatePhotos(data) {
             </div>
             <img src="${photo.src.large}" />
             <div class="gallery-download">
-                <a href="${photo.src.tiny}" target="_blank">Small</a>
-                <a href="${photo.src.medium}" target="_blank">Medium</a>
+                <a href="${photo.src.medium}" target="_blank">Small</a>
+                <a href="${photo.src.large}" target="_blank">Medium</a>
                 <a href="${photo.src.original}" target="_blank">Original</a>
             </div>
         `;
