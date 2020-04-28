@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+input {
+    outline: none;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
