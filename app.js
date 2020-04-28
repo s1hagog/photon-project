@@ -69,16 +69,20 @@ async function fetchAPI(url) {
 }
 
 function generatePhotos(data) {
-    console.log(data);
+    console.log(data.photos[0]);
     data.photos.forEach((photo) => {
         const galleryImg = document.createElement('div');
         galleryImg.classList.add('gallery-img');
         galleryImg.innerHTML = `
             <div class="gallery-info">
                 <p>${photo.photographer}</p>
-                <a href="${photo.src.original}" target="_blank">Download</a>
             </div>
             <img src="${photo.src.large}" />
+            <div class="gallery-download">
+                <a href="${photo.src.tiny}" target="_blank">Small</a>
+                <a href="${photo.src.medium}" target="_blank">Medium</a>
+                <a href="${photo.src.original}" target="_blank">Original</a>
+            </div>
         `;
         gallery.appendChild(galleryImg);
     });
