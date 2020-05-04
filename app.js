@@ -78,6 +78,7 @@ function generatePhotos(data) {
                 <p>${photo.photographer}</p>
             </div>
             <img src="${photo.src.large}" />
+            <div class="favourite-icon"><img src="./icons/star.svg" /></div>
             <div class="gallery-download">
                 <a href="${photo.src.medium}" target="_blank">Small</a>
                 <a href="${photo.src.large}" target="_blank">Medium</a>
