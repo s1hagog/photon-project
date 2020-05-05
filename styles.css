@@ -68,6 +68,10 @@ header h2 {
     object-fit: cover;
 }
 
+.gallery-img {
+    position: relative;
+}
+
 .gallery-info {
     display: flex;
     justify-content: space-between;
@@ -125,4 +129,12 @@ header h2 {
 
 .nav-links a:hover {
     color: #ffffff;
+}
+
+.favourite-icon {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    left: calc(100% - 50px);
+    top: -50px;
 }
