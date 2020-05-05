@@ -138,3 +138,7 @@ header h2 {
     left: calc(100% - 50px);
     top: -50px;
 }
+
+.favourite-icon img {
+    fill: #ffffff;
+}
