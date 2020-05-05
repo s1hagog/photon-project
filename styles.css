@@ -144,3 +144,7 @@ header h2 {
     height: 100%;
     object-fit: cover;
 }
+
+.favourite-icon svg path {
+    fill: rgb(74, 69, 131);
+}
