@@ -147,4 +147,10 @@ header h2 {
 
 .favourite-icon svg path {
     fill: rgb(74, 69, 131);
+    transition: 0.25s;
+}
+
+.favourite-icon:hover svg path {
+    fill: #ffc107;
+    cursor: pointer;
 }
