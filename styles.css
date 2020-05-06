@@ -154,3 +154,7 @@ header h2 {
     fill: #ffc107;
     cursor: pointer;
 }
+
+.favourite-icon.selected svg path {
+    fill: #ffc107;
+}
