@@ -96,6 +96,7 @@ async function curatedPhotos() {
     fetchLink = 'https://api.pexels.com/v1/curated?per_page=15&page=1';
     const data = await fetchAPI(fetchLink);
     generatePhotos(data);
+    return true;
 }
 
 async function searchPhotos(query) {
