@@ -71,7 +71,6 @@ async function fetchAPI(url) {
 }
 
 function generatePhotos(data) {
-    console.log(data.photos[0]);
     data.photos.forEach((photo) => {
         const galleryImg = document.createElement('div');
         galleryImg.classList.add('gallery-img');
@@ -107,10 +106,9 @@ async function searchPhotos(query) {
 
 async function prepareFavIcons() {
     const ready = await curatedPhotos();
-    console.log(ready);
+
     if (ready) {
         const favIcons = document.querySelectorAll('.favourite-icon');
-        console.log(favIcons);
     }
 }
 
