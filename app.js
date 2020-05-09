@@ -90,6 +90,10 @@ function generatePhotos(data) {
     });
 }
 
+function addToFavourite(e) {
+    console.log('Hello from the other side');
+}
+
 //Async functions
 async function curatedPhotos() {
     fetchLink = 'https://api.pexels.com/v1/curated?per_page=15&page=1';
@@ -109,6 +113,9 @@ async function prepareFavIcons() {
 
     if (ready) {
         const favIcons = document.querySelectorAll('.favourite-icon');
+        favIcons.forEach((icon) => {
+            icon.addEventListener('click', addToFavourite);
+        });
     }
 }
 
