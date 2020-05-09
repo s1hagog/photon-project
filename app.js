@@ -91,7 +91,8 @@ function generatePhotos(data) {
 }
 
 function addToFavourite(e) {
-    console.log('Hello from the other side');
+    console.log(e.target);
+    e.target.classList.add('selected');
 }
 
 //Async functions
