@@ -93,6 +93,10 @@ function generatePhotos(data) {
 function addToFavourite(e) {
     e.target.classList.add('selected');
     const imgSrc = e.target.parentNode.querySelector('img').src;
+
+    localStorage.setItem('favitem', imgSrc);
+
+    console.log(localStorage.getItem('favitem'));
 }
 
 //Async functions
