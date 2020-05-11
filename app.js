@@ -91,7 +91,6 @@ function generatePhotos(data) {
 }
 
 function addToFavourite(e) {
-    console.log(e.target);
     e.target.classList.add('selected');
 }
 
