@@ -113,6 +113,7 @@ header h2 {
     position: fixed;
     width: 100%;
     background: rgb(74, 69, 131);
+    z-index: 10;
 }
 
 .nav-links {
