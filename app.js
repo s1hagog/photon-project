@@ -97,7 +97,12 @@ function addToFavourite(e) {
     addToLocalStorage(imgSrc);
 }
 
-function addToLocalStorage(img) {}
+function addToLocalStorage(img) {
+    const imageArray = localStorage.getItem('someitem')
+        ? JSON.parse(localStorage.getItem('favitem'))
+        : [];
+    console.log(imageArray);
+}
 
 //Async functions
 async function curatedPhotos() {
