@@ -106,7 +106,12 @@ function addToLocalStorage(img) {
     const imageArray = localStorage.getItem('someitem')
         ? JSON.parse(localStorage.getItem('favitem'))
         : [];
-    // console.log(imageArray);
+
+    imageArray.push(img);
+
+    const jsonArray = JSON.stringify(imageArray);
+
+    localStorage.setItem('favitem', jsonArray);
 }
 
 //Async functions
