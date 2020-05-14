@@ -35,14 +35,19 @@
     <!-- <script src="app.js"></script> -->
     <script>
         const gallery = document.querySelector('.gallery');
-        const galleryFavImg = document.createElement('div');
-        galleryFavImg.classList.add('gallery-img');
-        galleryFavImg.innerHTML = `
-            <div class="gallery-info">
-                <p>Sample Info</p>
-            </div>
-            <img src="${localStorage.getItem('favitem')}" />
-        `;
-        gallery.appendChild(galleryFavImg);
+
+        const imagesArray = JSON.parse(localStorage.getItem('favitem'));
+
+        imagesArray.forEach((img) => {
+            const galleryFavImg = document.createElement('div');
+            galleryFavImg.classList.add('gallery-img');
+            galleryFavImg.innerHTML = `
+                <div class="gallery-info">
+                    <p>Sample Info</p>
+                </div>
+                <img src="${img}" />
+            `;
+            gallery.appendChild(galleryFavImg);
+        });
     </script>
 </html>
