@@ -36,18 +36,24 @@
     <script>
         const gallery = document.querySelector('.gallery');
 
-        const imagesArray = JSON.parse(localStorage.getItem('favitem'));
+        try {
+            const imagesArray = JSON.parse(localStorage.getItem('favitem'));
+        } catch (error) {
+            console.log(error);
+        }
 
-        imagesArray.forEach((img) => {
-            const galleryFavImg = document.createElement('div');
-            galleryFavImg.classList.add('gallery-img');
-            galleryFavImg.innerHTML = `
-                <div class="gallery-info">
-                    <p>Sample Info</p>
-                </div>
-                <img src="${img}" />
-            `;
-            gallery.appendChild(galleryFavImg);
-        });
+        if (imagesArray) {
+            imagesArray.forEach((img) => {
+                const galleryFavImg = document.createElement('div');
+                galleryFavImg.classList.add('gallery-img');
+                galleryFavImg.innerHTML = `
+                    <div class="gallery-info">
+                        <p>Sample Info</p>
+                    </div>
+                    <img src="${img}" />
+                `;
+                gallery.appendChild(galleryFavImg);
+            });
+        }
     </script>
 </html>
