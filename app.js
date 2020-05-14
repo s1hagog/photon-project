@@ -109,8 +109,10 @@ function addToLocalStorage(img) {
 
     imageArray.push(img);
 
+    //serialize array to store in local storage
     const jsonArray = JSON.stringify(imageArray);
 
+    //Save JSON string in local storage
     localStorage.setItem('favitem', jsonArray);
 }
 
