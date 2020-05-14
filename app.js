@@ -91,17 +91,22 @@ function generatePhotos(data) {
 }
 
 function addToFavourite(e) {
+    //Add class which changes color
     e.target.classList.add('selected');
+
+    //Get image absolute path from the src
     const imgSrc = e.target.parentNode.querySelector('img').src;
 
+    //Path to store in local storage
     addToLocalStorage(imgSrc);
 }
 
 function addToLocalStorage(img) {
+    //Prepare empty array or create array from existing JSON string
     const imageArray = localStorage.getItem('someitem')
         ? JSON.parse(localStorage.getItem('favitem'))
         : [];
-    console.log(imageArray);
+    // console.log(imageArray);
 }
 
 //Async functions
