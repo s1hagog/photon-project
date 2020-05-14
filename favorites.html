@@ -35,14 +35,15 @@
     <!-- <script src="app.js"></script> -->
     <script>
         const gallery = document.querySelector('.gallery');
+        const imagesArray = [];
 
         try {
-            const imagesArray = JSON.parse(localStorage.getItem('favitem'));
+            imagesArray = JSON.parse(localStorage.getItem('favitem'));
         } catch (error) {
             console.log(error);
         }
 
-        if (imagesArray) {
+        if (imagesArray.length != 0) {
             imagesArray.forEach((img) => {
                 const galleryFavImg = document.createElement('div');
                 galleryFavImg.classList.add('gallery-img');
@@ -54,6 +55,10 @@
                 `;
                 gallery.appendChild(galleryFavImg);
             });
+        } else {
+            const errorText = document.createElement('h1');
+            errorText.innerText = 'Sorry, no favourite images to show';
+            document.querySelector('main').appendChild(errorText);
         }
     </script>
 </html>
