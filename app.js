@@ -116,6 +116,8 @@ function addToLocalStorage(img) {
     localStorage.setItem('favitem', jsonArray);
 }
 
+function resetLocalStorage() {}
+
 //Async functions
 async function curatedPhotos() {
     fetchLink = 'https://api.pexels.com/v1/curated?per_page=15&page=1';
