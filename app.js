@@ -116,7 +116,9 @@ function addToLocalStorage(img) {
     localStorage.setItem('favitem', jsonArray);
 }
 
-function resetLocalStorage() {}
+function resetLocalStorage() {
+    localStorage.removeItem('favitem');
+}
 
 //Async functions
 async function curatedPhotos() {
@@ -156,4 +158,6 @@ prepareFavIcons();
 //     gallery.appendChild(galleryImg);
 // }
 
+//Debug functions;
 window.page = pageValue;
+window.emptyLocal = resetLocalStorage();
