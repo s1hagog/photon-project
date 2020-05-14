@@ -57,6 +57,7 @@
             });
         } else {
             const errorText = document.createElement('h1');
+            errorText.classList.add('error-message');
             errorText.innerText = 'Sorry, no favourite images to show';
             document.querySelector('main').appendChild(errorText);
         }

@@ -163,3 +163,8 @@ header h2 {
 .favourite-icon.selected svg path {
     fill: #ffc107;
 }
+
+.error-message {
+    text-align: center;
+    font-size: 1.8rem;
+}
