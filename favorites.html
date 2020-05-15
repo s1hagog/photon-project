@@ -42,7 +42,7 @@
         }
 
         //Check that it is not empty even if correct;
-        if (imagesArray.length != 0) {
+        if (imagesArray && imagesArray.length != 0) {
             imagesArray.forEach((img) => {
                 const galleryFavImg = document.createElement('div');
                 galleryFavImg.classList.add('gallery-img');
