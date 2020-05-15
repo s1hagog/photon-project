@@ -103,7 +103,7 @@ function addToFavourite(e) {
 
 function addToLocalStorage(img) {
     //Prepare empty array or create array from existing JSON string
-    const imageArray = localStorage.getItem('someitem')
+    const imageArray = localStorage.getItem('favitem')
         ? JSON.parse(localStorage.getItem('favitem'))
         : [];
 
