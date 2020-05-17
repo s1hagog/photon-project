@@ -1,4 +1,5 @@
 const gallery = document.querySelector('.gallery');
+const clearBtn = document.querySelector('.clear-favourites');
 let imagesArray = [];
 
 //Checking that our JSON string is correct
@@ -28,3 +29,10 @@ if (imagesArray && imagesArray.length != 0) {
     errorText.innerText = 'Sorry, no favourite images to show';
     document.querySelector('main').appendChild(errorText);
 }
+
+//Event Listeners
+clearBtn.addEventListener('click', clearFavourites);
+
+//Event Functions
+
+function clearFavourites() {}
