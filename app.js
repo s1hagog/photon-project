@@ -160,4 +160,4 @@ prepareFavIcons();
 
 //Debug functions;
 window.page = pageValue;
-window.emptyLocal = resetLocalStorage();
+window.emptyLocal = resetLocalStorage;
