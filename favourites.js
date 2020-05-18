@@ -23,6 +23,12 @@ if (imagesArray && imagesArray.length != 0) {
         gallery.appendChild(galleryFavImg);
     });
 } else {
+    displayEmptyMessage();
+}
+
+//Pure functions
+
+function displayEmptyMessage() {
     //Display error message
     const errorText = document.createElement('h1');
     errorText.classList.add('error-message');
@@ -37,7 +43,8 @@ clearBtn.addEventListener('click', clearFavourites);
 
 function clearFavourites() {
     //Remove all html from parent gallery div
-    gallery.innerHTML = '<h1>Everything cleared successfuly</h1>';
+    gallery.innerHTML = '';
+    displayEmptyMessage();
 
     //Clear local storage
     localStorage.removeItem('favitem');
