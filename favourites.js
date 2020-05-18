@@ -35,4 +35,10 @@ clearBtn.addEventListener('click', clearFavourites);
 
 //Event Functions
 
-function clearFavourites() {}
+function clearFavourites() {
+    //Remove all html from parent gallery div
+    gallery.innerHTML = '<h1>Everything cleared successfuly</h1>';
+
+    //Clear local storage
+    localStorage.removeItem('favitem');
+}
