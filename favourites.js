@@ -29,11 +29,17 @@ if (imagesArray && imagesArray.length != 0) {
 //Pure functions
 
 function displayEmptyMessage() {
-    //Display error message
-    const errorText = document.createElement('h1');
-    errorText.classList.add('error-message');
-    errorText.innerText = 'Sorry, no favourite images to show';
-    document.querySelector('main').appendChild(errorText);
+    if (document.querySelector('main').querySelector('h1')) {
+        //Update error message
+        document.querySelector('main').querySelector('h1').innerText =
+            'Sorry, no favourite images to show';
+    } else {
+        //Display error message
+        const errorText = document.createElement('h1');
+        errorText.classList.add('error-message');
+        errorText.innerText = 'Sorry, no favourite images to show';
+        document.querySelector('main').appendChild(errorText);
+    }
 }
 
 //Event Listeners
