@@ -103,6 +103,19 @@ header h2 {
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
+    transition: 0.25s;
+}
+
+.overlay-btn:hover {
+    background: rgb(101, 95, 170);
+}
+
+.favourite-icon.overlay {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: calc(100% - 40px);
+    top: calc(100% - 40px);
 }
 
 .gallery-img:hover .image-overlay {
