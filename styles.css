@@ -78,7 +78,7 @@ header h2 {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #000000;
+    background-color: #00000070;
     opacity: 0;
     transition: 0.25s;
 
@@ -106,7 +106,7 @@ header h2 {
 }
 
 .gallery-img:hover .image-overlay {
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .gallery-info {
