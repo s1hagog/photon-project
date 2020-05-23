@@ -72,6 +72,11 @@ header h2 {
     position: relative;
 }
 
+.image-thumbnail {
+    height: 100%;
+    width: 100%;
+}
+
 .image-overlay {
     position: absolute;
     top: 0;
