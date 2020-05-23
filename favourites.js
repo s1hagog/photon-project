@@ -60,6 +60,12 @@ function displayEmptyMessage() {
 
 //Event Listeners
 clearBtn.addEventListener('click', clearFavourites);
+saveBtns.forEach((btn) => {
+    btn.addEventListener('click', savePic);
+});
+openBtns.forEach((btn) => {
+    btn.addEventListener('click', openPic);
+});
 
 //Event Functions
 
@@ -71,3 +77,7 @@ function clearFavourites() {
     //Clear local storage
     localStorage.removeItem('favitem');
 }
+
+function savePic(e) {}
+
+function openPic(e) {}
