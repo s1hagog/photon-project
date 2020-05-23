@@ -25,8 +25,8 @@ if (imagesArray && imagesArray.length != 0) {
                 </div>
                 <div class="image-overlay">
                     <div class="btn-group">
-                        <button class="overlay-btn">Save</button>
-                        <button class="overlay-btn">Open</button>
+                        <button class="overlay-btn save-btn">Save</button>
+                        <button class="overlay-btn open-btn">Open</button>
                     </div>
                     <div class="favourite-icon overlay selected">
                         ${svgStar}
@@ -38,6 +38,9 @@ if (imagesArray && imagesArray.length != 0) {
 } else {
     displayEmptyMessage();
 }
+
+const saveBtns = document.querySelectorAll('.save-btn');
+const openBtns = document.querySelectorAll('.open-btn');
 
 //Pure functions
 
