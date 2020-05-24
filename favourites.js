@@ -41,7 +41,6 @@ if (imagesArray && imagesArray.length != 0) {
 
 const saveBtns = document.querySelectorAll('.save-btn');
 const openBtns = document.querySelectorAll('.open-btn');
-
 //Pure functions
 
 function displayEmptyMessage() {
@@ -80,4 +79,8 @@ function clearFavourites() {
 
 function savePic(e) {}
 
-function openPic(e) {}
+function openPic(e) {
+    window.open(
+        e.target.parentNode.parentNode.parentNode.querySelector('img').src
+    );
+}
