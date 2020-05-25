@@ -57,6 +57,53 @@ function displayEmptyMessage() {
     }
 }
 
+//Other functions
+
+function resolveCanvasDimensions() {
+    const img = e.target.parentNode.parentNode.parentNode.querySelector('img');
+    const {width, height} = window.getComputedStyle(img);
+
+    canvas.width = +parseFloat(width);
+    canvas.height = +parseFloat(height);
+
+    canvas.style.width = width;
+    canvas.style.height = height;
+}
+
+function processGrayscaleImage() {
+    const ctx = canvas.getContext('2d');
+    const {width, height} = canvas;
+
+    ctx.drawImage(img, 0, 0, width, height);
+
+    const imageData = ctx.getImageData(0, 0, width, height);
+    const data = imageData.data;
+
+    for (let i = 0, len = data.length; i < len; i += 4) {
+        const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+
+        data[i] = avg; // red
+        data[i + 1] = avg; // green
+        data[i + 2] = avg; // blue
+    }
+
+    ctx.putImageData(imageData, 0, 0);
+    document.body.appendChild(ctx);
+
+    // canvas.toBlob(blob => {
+    //     const downloadLink = downloadBlob(blob);
+
+    //     // Set the title and classnames of the link
+    //     downloadLink.title = 'Download Grayscale';
+    //     downloadLink.classList.add('btn-link', 'download-link');
+
+    //     downloadLink.textContent = 'Download Grayscale';
+
+    //     // Attach the link to the DOM
+    //     document.body.appendChild(downloadLink);
+    // });
+}
+
 //Event Listeners
 clearBtn.addEventListener('click', clearFavourites);
 saveBtns.forEach((btn) => {
