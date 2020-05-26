@@ -91,7 +91,7 @@ function processGrayscaleImage(e) {
     }
 
     ctx.putImageData(imageData, 0, 0);
-    document.body.appendChild(ctx);
+    document.body.appendChild(canvas);
 
     // canvas.toBlob(blob => {
     //     const downloadLink = downloadBlob(blob);
