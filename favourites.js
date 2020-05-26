@@ -22,6 +22,7 @@ if (imagesArray && imagesArray.length != 0) {
                     <img
                         src="${img}"
                         alt=""
+                        crossorigin="anonymous"
                     />
                 </div>
                 <div class="image-overlay">
