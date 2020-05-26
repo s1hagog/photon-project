@@ -96,22 +96,14 @@ function processGrayscaleImage(e) {
     ctx.drawImage(img, 0, 0, width, height);
 
     const imageData = ctx.getImageData(0, 0, width, height);
-    const data = imageData.data;
-
-    for (let i = 0, len = data.length; i < len; i += 4) {
-        const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
-
-        data[i] = avg; // red
-        data[i + 1] = avg; // green
-        data[i + 2] = avg; // blue
-    }
 
     ctx.putImageData(imageData, 0, 0);
+    document.body.appendChild(canvas);
 
-    canvas.toBlob((blob) => {
-        const downloadLink = downloadBlob(blob);
-        downloadLink.click();
-    });
+    // canvas.toBlob((blob) => {
+    //     const downloadLink = downloadBlob(blob);
+    //     downloadLink.click();
+    // });
 }
 
 //Event Listeners
