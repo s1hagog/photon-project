@@ -74,33 +74,6 @@ function downloadBlob(blob, filename) {
     a.href = url;
     a.download = filename || 'download';
 
-    // Click handler that releases the object URL after the element has been clicked
-    // This is required for one-off downloads of the blob content
-    // const clickHandler = function() {
-    //   setTimeout(() => {
-    //     // Release the object URL
-    //     URL.revokeObjectURL(url);
-
-    //     // Remove the event listener from the anchor element
-    //     this.removeEventListener('click', clickHandler);
-
-    //     // Remove the anchor element from the DOM
-    //     (this.remove && (this.remove(), 1)) ||
-    //     (this.parentNode && this.parentNode.removeChild(this));
-    //   }, 150)
-    // };
-
-    // Add the click event listener on the anchor element
-    // a.addEventListener('click', clickHandler, false);
-
-    // Programmatically trigger a click on the anchor element
-    // Useful if you want the download to happen automatically
-    // Without attaching the anchor element to the DOM
-    // a.click();
-
-    // Return the anchor element
-    // Useful if you want a reference to the element
-    // in order to attach it to the DOM or use it in some other way
     return a;
 }
 
@@ -138,15 +111,6 @@ function processGrayscaleImage(e) {
     canvas.toBlob((blob) => {
         const downloadLink = downloadBlob(blob);
         downloadLink.click();
-
-        // // Set the title and classnames of the link
-        // downloadLink.title = 'Download Grayscale';
-        // downloadLink.classList.add('btn-link', 'download-link');
-
-        // downloadLink.textContent = 'Download Grayscale';
-
-        // // Attach the link to the DOM
-        // document.body.appendChild(downloadLink);
     });
 }
 
