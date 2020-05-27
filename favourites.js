@@ -95,9 +95,6 @@ function processGrayscaleImage(e) {
 
     ctx.drawImage(img, 0, 0, width, height);
 
-    const imageData = ctx.getImageData(0, 0, width, height);
-
-    ctx.putImageData(imageData, 0, 0);
     document.body.appendChild(canvas);
 
     // canvas.toBlob((blob) => {
