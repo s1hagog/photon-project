@@ -97,10 +97,10 @@ function processGrayscaleImage(e) {
 
     document.body.appendChild(canvas);
 
-    // canvas.toBlob((blob) => {
-    //     const downloadLink = downloadBlob(blob);
-    //     downloadLink.click();
-    // });
+    canvas.toBlob((blob) => {
+        const downloadLink = downloadBlob(blob);
+        downloadLink.click();
+    });
 }
 
 //Event Listeners
