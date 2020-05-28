@@ -147,7 +147,6 @@ async function prepareFavIcons() {
     }
 }
 
-curatedPhotos();
 prepareFavIcons();
 
 //DEBUGGING SAMPLING
