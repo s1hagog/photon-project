@@ -75,6 +75,10 @@ function generatePhotos(data) {
         const galleryImg = document.createElement('div');
         let altText = photo.url.replace('https://www.pexels.com/photo/', '');
         altText = altText.replace(/[0-9]/g, '').slice(0, -2);
+
+        //For SEO alt text
+        altText = altText.replace(/-/g, ' ');
+
         galleryImg.classList.add('gallery-img');
         galleryImg.innerHTML = `
             <div class="gallery-info">
