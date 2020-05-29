@@ -79,6 +79,10 @@ function generatePhotos(data) {
         //For SEO alt text
         altText = altText.replace(/-/g, ' ');
 
+        if (altText.length == 0) {
+            altText = photo.photographer;
+        }
+
         galleryImg.classList.add('gallery-img');
         galleryImg.innerHTML = `
             <div class="gallery-info">
