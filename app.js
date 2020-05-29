@@ -73,13 +73,14 @@ async function fetchAPI(url) {
 function generatePhotos(data) {
     data.photos.forEach((photo) => {
         const galleryImg = document.createElement('div');
-        const altText = photo.url.replace('https://www.pexels.com/photo/', '');
+        let altText = photo.url.replace('https://www.pexels.com/photo/', '');
+        altText = altText.replace(/[0-9]/g, '').slice(0, -2);
         galleryImg.classList.add('gallery-img');
         galleryImg.innerHTML = `
             <div class="gallery-info">
                 <p>${photo.photographer}</p>
             </div>
-            <img src="${photo.src.large}" />
+            <img src="${photo.src.large}"  alt="${altText}"/>
             <div class="favourite-icon">${svgStar}</div>
             <div class="gallery-download">
                 <a href="${photo.src.medium}" target="_blank">Small</a>
@@ -88,7 +89,6 @@ function generatePhotos(data) {
             </div>
         `;
         gallery.appendChild(galleryImg);
-        console.log(altText);
     });
 }
 
