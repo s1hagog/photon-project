@@ -107,8 +107,11 @@ function addToFavourite(e) {
     //Get image absolute path from the src
     const imgSrc = e.target.parentNode.querySelector('img').src;
 
+    //Get alt text for download filename
+    const altText = e.target.parentNode.querySelector('img').alt;
+
     //Path to store in local storage
-    addToLocalStorage(imgSrc);
+    addToLocalStorage(imgSrc, altText);
 }
 
 function addToLocalStorage(img) {
