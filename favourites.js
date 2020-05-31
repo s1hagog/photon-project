@@ -100,9 +100,10 @@ function processGrayscaleImage(e) {
     document.body.appendChild(canvas);
 
     //make appropriate filename
+    altText = altText.replace(/ /g, '-');
 
     canvas.toBlob((blob) => {
-        const downloadLink = downloadBlob(blob);
+        const downloadLink = downloadBlob(blob, altText);
         downloadLink.click();
     });
 }
