@@ -114,13 +114,18 @@ function addToFavourite(e) {
     addToLocalStorage(imgSrc, altText);
 }
 
-function addToLocalStorage(img) {
+function addToLocalStorage(img, altText) {
+    const pic = {
+        img,
+        altText,
+    };
+
     //Prepare empty array or create array from existing JSON string
     const imageArray = localStorage.getItem('favitem')
         ? JSON.parse(localStorage.getItem('favitem'))
         : [];
 
-    imageArray.push(img);
+    imageArray.push(pic);
 
     //serialize array to store in local storage
     const jsonArray = JSON.stringify(imageArray);
