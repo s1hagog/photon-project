@@ -14,14 +14,14 @@ try {
 
 //Check that it is not empty even if correct;
 if (imagesArray && imagesArray.length != 0) {
-    imagesArray.forEach((img) => {
+    imagesArray.forEach(({img, altText}) => {
         const galleryFavImg = document.createElement('div');
         galleryFavImg.classList.add('gallery-img');
         galleryFavImg.innerHTML = `
                 <div class="image-thumbnail">
                     <img
                         src="${img}"
-                        alt=""
+                        alt="${altText}"
                         crossorigin="anonymous"
                     />
                 </div>
@@ -90,12 +90,16 @@ function resolveCanvasDimensions(e) {
 
 function processGrayscaleImage(e) {
     const img = e.target.parentNode.parentNode.parentNode.querySelector('img');
+    let altText = e.target.parentNode.parentNode.parentNode.querySelector('img')
+        .alt;
     const ctx = canvas.getContext('2d');
     const {width, height} = canvas;
 
     ctx.drawImage(img, 0, 0, width, height);
 
     document.body.appendChild(canvas);
+
+    //make appropriate filename
 
     canvas.toBlob((blob) => {
         const downloadLink = downloadBlob(blob);
