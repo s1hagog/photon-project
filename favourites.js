@@ -105,7 +105,7 @@ function processGrayscaleImage(e) {
     canvas.toBlob((blob) => {
         const downloadLink = downloadBlob(blob, altText);
         downloadLink.click();
-    });
+    }, 'image/jpeg');
 }
 
 //Event Listeners
