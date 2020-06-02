@@ -97,8 +97,6 @@ function processGrayscaleImage(e) {
 
     ctx.drawImage(img, 0, 0, width, height);
 
-    document.body.appendChild(canvas);
-
     //make appropriate filename
     altText = altText.replace(/ /g, '-');
 
