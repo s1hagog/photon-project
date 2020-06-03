@@ -43,8 +43,9 @@ if (imagesArray && imagesArray.length != 0) {
 
 const saveBtns = document.querySelectorAll('.save-btn');
 const openBtns = document.querySelectorAll('.open-btn');
-//Pure functions
+const favIcons = document.querySelectorAll('.favourite-icon');
 
+//Pure functions
 function displayEmptyMessage() {
     if (document.querySelector('main').querySelector('h1')) {
         //Update error message
