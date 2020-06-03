@@ -115,6 +115,9 @@ saveBtns.forEach((btn) => {
 openBtns.forEach((btn) => {
     btn.addEventListener('click', openPic);
 });
+favIcons.forEach((icon) => {
+    icon.addEventListener('click', toggleFromFavourite);
+});
 
 //Event Functions
 
@@ -136,4 +139,8 @@ function openPic(e) {
     window.open(
         e.target.parentNode.parentNode.parentNode.querySelector('img').src
     );
+}
+
+function toggleFromFavourite(e) {
+    const icon = e.target;
 }
