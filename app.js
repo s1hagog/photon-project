@@ -14,7 +14,7 @@ let searchValue;
 let pageValue = 1;
 let fetchLink = '';
 let currentSearch = '';
-let vaaa = 10;
+let vaaa = 100;
 
 //Event Listener
 
