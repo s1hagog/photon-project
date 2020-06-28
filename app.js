@@ -16,7 +16,7 @@ let fetchLink = '';
 let currentSearch = '';
 
 console.log('');
-console.log('');
+// console.log('');
 
 //Event Listener
 
