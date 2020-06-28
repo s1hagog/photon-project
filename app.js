@@ -51,7 +51,7 @@ async function loadMorePhotos() {
 
 function newfunc() {
     console.log('ahahaha')
-    console.log('')
+    console.log('Hello')
     console.log('')
 }
 
