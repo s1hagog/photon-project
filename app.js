@@ -15,7 +15,7 @@ let pageValue = 1;
 let fetchLink = '';
 let currentSearch = '';
 
-
+console.log('')
 
 //Event Listener
 
