@@ -50,7 +50,7 @@ async function loadMorePhotos() {
 }
 
 function newfunc() {
-
+    console.log('')
 }
 
 //recurisive cleaning
