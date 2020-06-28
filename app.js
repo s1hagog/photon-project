@@ -50,9 +50,9 @@ async function loadMorePhotos() {
 }
 
 function rename() {
-    console.log('ahahaha')
-    console.log('Hello')
-    console.log('world')
+    console.log('ahahaha');
+    console.log('Hello');
+    console.log('world');
 }
 
 //recurisive cleaning
