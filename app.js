@@ -50,9 +50,9 @@ async function loadMorePhotos() {
 }
 
 function newfunc() {
-    console.log('ahahaha')
-    console.log('Hello')
-    console.log('world')
+    // console.log('ahahaha')
+    // console.log('Hello')
+    // console.log('world')
 }
 
 //recurisive cleaning
