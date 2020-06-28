@@ -49,11 +49,7 @@ async function loadMorePhotos() {
     generatePhotos(data);
 }
 
-function rename() {
-    console.log('ahahaha');
-    console.log('Hello');
-    console.log('world');
-}
+
 
 //recurisive cleaning
 function recursiveDelete() {
