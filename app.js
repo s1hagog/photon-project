@@ -49,7 +49,7 @@ async function loadMorePhotos() {
     generatePhotos(data);
 }
 
-function newfunc() {
+function rename() {
     console.log('ahahaha')
     console.log('Hello')
     console.log('world')
