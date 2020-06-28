@@ -49,6 +49,10 @@ async function loadMorePhotos() {
     generatePhotos(data);
 }
 
+function newfunc() {
+
+}
+
 //recurisive cleaning
 function recursiveDelete() {
     if (!gallery.lastElementChild) {
